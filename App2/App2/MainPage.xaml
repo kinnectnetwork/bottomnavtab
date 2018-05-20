@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             xmlns:controls="clr-namespace:App2.Controls"
+             x:Class="App2.MainPage">
+
+    <Grid ColumnSpacing="0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="44"/>
+        </Grid.RowDefinitions>
+
+        <!--For Page Content-->
+        <ContentView x:Name="PlaceHolder" Grid.Row="0"/>
+
+        <!--For Line divider-->
+        <BoxView BackgroundColor="#DCDCDC" Grid.Row="1"/>
+
+        <!--The tabs-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+
+            <controls:IconView x:Name="Icon1" Grid.Column="0" 
+                               VerticalOptions="FillAndExpand"
+                               IconPosition="1"
+                               ImageSource="resource://App2.Assets.Images.001-target.png" ImageWidthRequest="20" ImageHexColor="#AAAAAA"
+                               LabelText="Search"
+                               IconTapped="Icon_IconTapped"/>
+
+            <controls:IconView x:Name="Icon2" Grid.Column="1" 
+                               IconPosition="2"
+                               ImageSource="resource://App2.Assets.Images.004-chat.png" ImageWidthRequest="20" ImageHexColor="#AAAAAA"
+                               LabelText="Chat"
+                               IconTapped="Icon_IconTapped"/>
+
+            <controls:IconView x:Name="Icon3" Grid.Column="2" 
+                               IconPosition="3"
+                               ImageSource="resource://App2.Assets.Images.005-share.png" ImageWidthRequest="20" ImageHexColor="#AAAAAA"
+                               LabelText="My Network"
+                               IconTapped="Icon_IconTapped"/>
+
+            <controls:IconView x:Name="Icon4" Grid.Column="3" 
+                               IconPosition="4"
+                               ImageSource="resource://App2.Assets.Images.003-social.png" ImageWidthRequest="20" ImageHexColor="#AAAAAA"
+                               LabelText="My Profile"
+                               IconTapped="Icon_IconTapped"/>
+
+        </Grid>
+    </Grid>
+</ContentPage>

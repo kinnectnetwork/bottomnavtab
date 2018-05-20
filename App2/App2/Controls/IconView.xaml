@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="App2.Controls.IconView">
+
+    <ContentView.BackgroundColor>
+        <Color>Gold</Color>
+    </ContentView.BackgroundColor>
+
+    <ContentView.Content>
+        
+        <StackLayout Spacing="0" VerticalOptions="Center" HorizontalOptions="Center">
+            
+            <ffimageloading:CachedImage x:Name="IconImage" Aspect="AspectFit">
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:TintTransformation x:Name="IconTint" EnableSolidColor="true" />
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+
+            <Label x:Name="IconLabel" FontSize="8" Margin="0" />
+
+        </StackLayout>
+    </ContentView.Content>
+
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+    </ContentView.GestureRecognizers>
+
+</ContentView>
